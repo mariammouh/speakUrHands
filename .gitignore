@@ -1,0 +1,109 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# JAR files
+*.jar
+!speakurhands.jar  # Keep your main application JAR
+
+# Python distributions
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Dataset and large files
+dataset/
+datasets/
+*.zip
+*.tar
+*.gz
+*.7z
+
+# Training outputs
+training/models/  # Exclude trained models (they should be built/generated)
+training/checkpoints/
+training/logs/
+
+# Docker
+docker-compose.override.yml
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+
+# Camera/media files
+*.mp4
+*.avi
+*.mov
+*.jpg
+*.png
+*.jpeg
+
+# Machine learning specific
+*.pkl
+*.pickle
+*.h5
+*.keras
+
+# Java specific
+*.class
+*.war
+*.ear
+
+# Maven
+target/
+
+# Gradle
+.gradle/
+build/
+
+# Node.js (if any frontend)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# MacOS
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/20.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            prefWidth="800" prefHeight="600"
+            fx:controller="controllers.CameraController"
+            stylesheets="@application.css">
+
+
+    <VBox alignment="CENTER" spacing="20"
+          AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+
+        <!-- New Label -->
+        <Label text="Now make the signs with your right hand every five seconds" styleClass="label" />
+
+        <ImageView fx:id="cameraView" fitWidth="500" fitHeight="350" preserveRatio="true" />
+
+        <VBox alignment="CENTER" spacing="5">
+             <Label fx:id="predictionLabel" text="Prediction: Waiting..." styleClass="label" />
+             <Label fx:id="translationLabel" text="Translation: " styleClass="label" />
+
+        </VBox>
+
+
+
+         <padding>
+             <Insets top="20.0" right="20.0" bottom="20.0" left="20.0" />
+         </padding>
+
+    </VBox>
+
+
+    <JFXButton onAction="#goBackToHome" prefHeight="60" prefWidth="60"
+               AnchorPane.leftAnchor="20" AnchorPane.bottomAnchor="20">
+        <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../application/imagess/angle-left.png"/>
+                </image>
+            </ImageView>
+        </graphic>
+    </JFXButton>
+
+</AnchorPane>

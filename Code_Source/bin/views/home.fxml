@@ -1,0 +1,64 @@
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+
+<StackPane prefHeight="600" prefWidth="800" stylesheets="@application.css" 
+           xmlns="http://javafx.com/javafx/20.0.2" 
+           xmlns:fx="http://javafx.com/fxml/1" 
+           fx:controller="controllers.HomeController">
+
+    <HBox prefHeight="100.0" prefWidth="800.0" spacing="10">
+        <children>
+            <!-- Settings button -->
+            <JFXButton styleClass="icon-button">
+                <graphic>
+                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../application/imagess/settings.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </JFXButton>
+
+            <!-- Notifications button -->
+            <JFXButton styleClass="icon-button">
+                <graphic>
+                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../application/imagess/bell.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </JFXButton>
+        </children>
+    </HBox>
+
+    <VBox alignment="CENTER" prefHeight="500" prefWidth="800" spacing="5">
+        <children>
+            <!-- Logo  -->
+            <StackPane alignment="BOTTOM_CENTER">
+                <ImageView fitHeight="290.0" fitWidth="250.0" 
+                           pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../application/imagess/logo3.png" />
+                    </image>
+                </ImageView>
+            </StackPane>
+           
+            <JFXButton onAction="#handleStart" styleClass="play-button">
+                <graphic>
+                    <ImageView fitHeight="20.0" fitWidth="20.0" 
+                              pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../application/imagess/play.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </JFXButton>
+        </children>
+    </VBox>
+</StackPane>

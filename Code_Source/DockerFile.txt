@@ -1,0 +1,43 @@
+# Base Ubuntu image
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install dependencies
+RUN apt-get update && apt-get install -y \
+    openjdk-19-jdk \
+    wget unzip \
+    python3.10 \
+    python3-pip \
+    python3-opencv \
+    libgl1-mesa-glx \
+    libgtk-3-dev \
+    ffmpeg \
+    x11-apps \
+    && rm -rf /var/lib/apt/lists/*
+
+# Fix: create a symlink so "python" points to "python3"
+RUN ln -s /usr/bin/python3 /usr/bin/python
+
+# Install Python libraries
+RUN pip3 install tensorflow numpy opencv-python matplotlib pandas
+
+# Download and install JavaFX 17 SDK
+RUN wget https://download2.gluonhq.com/openjfx/17.0.2/openjfx-17.0.2_linux-x64_bin-sdk.zip \
+    && unzip openjfx-17.0.2_linux-x64_bin-sdk.zip -d /opt/ \
+    && rm openjfx-17.0.2_linux-x64_bin-sdk.zip
+
+ENV JAVAFX_HOME=/opt/javafx-sdk-17.0.2
+ENV PATH=$PATH:$JAVAFX_HOME/bin
+
+# Set workdir
+WORKDIR /app
+
+# Copy the JAR
+COPY SpeakUrHands.jar .
+
+# Set X11 display to host
+ENV DISPLAY=:0
+
+# Run the JavaFX JAR with JavaFX libraries
+CMD ["java", "--module-path", "/opt/javafx-sdk-17.0.2/lib", "--add-modules", "javafx.controls,javafx.fxml", "-jar", "SpeakUrHands.jar"]

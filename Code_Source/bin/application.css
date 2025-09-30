@@ -1,0 +1,151 @@
+.root {
+    -fx-background-color: linear-gradient(to bottom, #A18CD1, #FBC2EB);
+    -fx-font-family: "Arial";
+}
+
+.button {
+    -fx-background-color: #6A5ACD;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px 24px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-border-color: #9370DB;
+    -fx-effect: dropshadow(gaussian, #4B0082, 10, 0.6, 0, 3);
+}
+
+.button:pressed {
+    -fx-background-color: #8A2BE2;
+}
+
+.jfx-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 10;
+}
+
+.jfx-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+}
+
+.text {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-font-family: "Arial";
+}
+
+/* Style pour les VBox (disposition verticale) */
+.vbox {
+    -fx-alignment: center;
+    -fx-spacing: 25px;
+}
+
+.label {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Helvetica Neue", sans-serif;
+    -fx-effect: dropshadow(gaussian, #6A5ACD, 5, 0.4, 0, 3);
+    -fx-padding: 15px;
+    -fx-background-color: rgba(0, 0, 0, 0.3);
+    -fx-background-radius: 25px;
+}
+
+.message-label {
+    -fx-font-size: 18px;
+    -fx-text-fill: #F8F8FF;
+}
+
+.back-button {
+    -fx-background-color: #9370DB;
+    -fx-text-fill: black;
+    -fx-font-size: 16px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 20px;
+}
+
+.play-button {
+    -fx-background-color: #8A2BE2;
+    -fx-text-fill: white;
+    -fx-font-size: 22px;
+    -fx-padding: 12px 30px;
+    -fx-border-radius: 25px;
+}
+
+.play-button:hover {
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+    -fx-background-color: #9370DB;
+}
+
+.logo-title {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-background-radius: 25px;
+    -fx-padding: 15px;
+    -fx-font-family: "Helvetica Neue", sans-serif;
+}
+
+.overlay-title {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, black, 5, 0.5, 0, 0);
+}
+
+.radio-button {
+    -fx-text-fill: white;
+}
+
+.radio-button .radio {
+    -fx-border-width: 2px;
+    -fx-border-color: #9370DB;
+    -fx-background-color: transparent;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+}
+
+.radio-button:selected .radio {
+    -fx-background-color: #6A5ACD;
+}
+
+.radio-button .image-view {
+    -fx-effect: dropshadow(gaussian, #4B0082, 5, 0.4, 0, 2);
+}
+
+.dialog-pane {
+    -fx-background-color: linear-gradient(to bottom, #A18CD1, #FBC2EB);
+    -fx-padding: 30px;
+    -fx-alignment: center;
+}
+
+.dialog-pane .label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-effect: none;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: #6A5ACD;
+}
+
+.dialog-pane .header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+
+.dialog-pane .button-bar .button {
+    -fx-background-color: #8A2BE2;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 16px;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-effect: none;
+}
